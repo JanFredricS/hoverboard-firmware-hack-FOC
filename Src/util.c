@@ -1580,7 +1580,7 @@ void poweroffPressCheck(void) {
           beepShort(5);
           #endif
         }
-      } else if (cnt_press > 8) {                         // Short press: power off (80 ms debounce)
+      } else if (cnt_press > 30) {                         // Short press: power off (increased to 300ms from 80 ms debounce)
         #if defined(DEBUG_SERIAL_USART2) || defined(DEBUG_SERIAL_USART3)
           printf("Powering off, button has been pressed\r\n");
         #endif
